@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="studentManagement.Views.MainPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="10">
+                 <Button x:Name="_addStudentButton" Text="Add Student" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="_addSubjectButton" Text="Add Subject" HorizontalOptions="FillAndExpand"/>
+                
+            </StackLayout>
+            <Button x:Name="_LogoutButton" Text="Logout" HorizontalOptions="FillAndExpand" />
+            <Label x:Name="_loginUserNameLabel" VerticalOptions="End" FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="Start"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:studentManagement"
+             x:Class="studentManagement.LoginPage">
+
+    <StackLayout>
+        <StackLayout Padding="10">
+            <Entry x:Name="_userName" Text="{Binding UserId}" Placeholder="Enter User Name" HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="_password" Text="{Binding Password}" IsPassword="True" Placeholder="Enter Password" HorizontalOptions="FillAndExpand"/>
+            <Button x:Name="_login" Text="Login" HorizontalOptions="FillAndExpand" Clicked="Login_Clicked"/>
+            <Button x:Name="_createUser" Text="Create New User" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <Button x:Name="_StudentPage" Text="Student" HorizontalOptions="FillAndExpand" />
+    </StackLayout>
+
+</ContentPage>

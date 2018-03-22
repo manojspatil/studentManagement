@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="studentManagement.Views.CreateUserLoginPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Entry x:Name="_facultyName" Placeholder="Enter Faculty Name" Text="{Binding FacultyName}" HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="_userName" Placeholder="User Name" Text="{Binding UserName}" HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="_Password" Placeholder="Enter Password" Text="{Binding Password}" HorizontalOptions="FillAndExpand"/>
+            <Button x:Name="_Create" Text="Create" HorizontalOptions="FillAndExpand" TextColor="White" Clicked="Create_Clicked"/>
+            <Button x:Name="_Cancel" Text="Cancel" HorizontalOptions="FillAndExpand" TextColor="White" Clicked="Cancel_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

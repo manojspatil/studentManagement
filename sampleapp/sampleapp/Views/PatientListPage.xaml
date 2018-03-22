@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sampleapp.Views.PatientListPage">
+    <ContentPage.Content>
+        <ListView x:Name="patientListView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemsSource="PatientDetailList" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!--<TextCell Text="{Binding PatientName}" Detail="{Binding Address}"/>-->
+
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Padding="10" HorizontalOptions="FillAndExpand" HeightRequest="50">
+
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                                    <Label x:Name="a" Text="{Binding PatientName}" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" TextColor="Black"/>
+                                    <Label x:Name="b" Text="{Binding UHID}" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" />
+                                    <Label x:Name="c" Text="{Binding Age}" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand" TextColor="Black"/>
+                                </StackLayout>
+                                <Label x:Name="d" Text="{Binding Address}"  HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" TextColor="Black"/>
+                            </StackLayout>
+
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+
+
+
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

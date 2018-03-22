@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="studentManagement.Views.AddStudentMarkPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Entry x:Name="_studentName" Placeholder="Enter Student Name"  HorizontalOptions="FillAndExpand" Text="{Binding StudentName}"/>
+            <ListView x:Name="_subjectListView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Padding="10" HeightRequest="40" HorizontalOptions="FillAndExpand">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label  Text="{Binding SubjectName}" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" TextColor="Black"/>
+                                        <Entry Text="{Binding Marks}" WidthRequest="50" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" />
+                                    </StackLayout>
+                                </StackLayout> 
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate> 
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="_saveButton" Text="Create" HorizontalOptions="FillAndExpand" TextColor="Black"/>
+            <Button x:Name="_Cancel" Text="Cancel" HorizontalOptions="FillAndExpand" TextColor="Black" Clicked="Cancel_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
